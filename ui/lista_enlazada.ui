@@ -14,95 +14,115 @@
    <string>Dialog</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">/* =========================
-   QDialog - World Cup Dark
-   ========================= */
+   <string notr="true">/* Estilo general de la ventana */
 QDialog {
-    background-color: #121212;
-    border: 2px solid #C9A227;
-    border-radius: 15px;
+    background-color: #1e1e24;
+    color: #f5f5f7;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 13px;
 }
 
-/* =========================
-   QLabel
-   ========================= */
-QLabel {
-    color: #FFFFFF;
-    font-size: 14px;
+/* Título principal */
+QLabel#label {
+    color: #00adb5;
+    font-size: 18px;
     font-weight: bold;
-    background: transparent;
+    padding: 10px 0px;
 }
 
-/* Títulos */
-QLabel#titulo {
-    color: #C9A227;
-    font-size: 24px;
-    font-weight: bold;
-    padding: 10px;
-}
-
-/* =========================
-   QLineEdit
-   ========================= */
-QLineEdit {
-    background-color: #1E1E1E;
-    color: #FFFFFF;
-    border: 2px solid #2E8B57;
+/* Contenedores (Paneles de Datos y Operaciones) */
+QGroupBox {
+    border: 2px solid #2a2a35;
     border-radius: 8px;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #00adb5;
+    padding-top: 15px;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top left;
+    left: 15px;
+    padding: 0 5px;
+}
+
+/* Campo de texto para ingresar datos */
+QLineEdit#txt_dato {
+    background-color: #2a2a35;
+    color: #ffffff;
+    border: 2px solid #3f3f52;
+    border-radius: 6px;
     padding: 8px;
     font-size: 14px;
-    selection-background-color: #C9A227;
+    selection-background-color: #00adb5;
 }
 
-QLineEdit:focus {
-    border: 2px solid #C9A227;
-    background-color: #252525;
+QLineEdit#txt_dato:focus {
+    border: 2px solid #00adb5;
+    background-color: #2d2d3a;
 }
 
-/* =========================
-   QPushButton
-   ========================= */
+/* Estilo base para TODOS los botones */
 QPushButton {
-    background-color: #006847;
-    color: white;
-    border: 2px solid #C9A227;
-    border-radius: 10px;
-    padding: 8px 15px;
-    font-size: 14px;
+    background-color: #2a2a35;
+    color: #ffffff;
+    border: 1px solid #3f3f52;
+    border-radius: 6px;
+    padding: 10px 15px;
+    font-size: 13px;
     font-weight: bold;
 }
 
+/* Efecto al pasar el mouse por encima de los botones */
 QPushButton:hover {
-    background-color: #008F5A;
-    border: 2px solid #FFD700;
+    background-color: #3f3f52;
+    border-color: #00adb5;
 }
 
+/* Efecto al hacer clic */
 QPushButton:pressed {
-    background-color: #004D33;
-    padding-top: 10px;
+    background-color: #1e1e24;
 }
 
-/* Botón principal */
-QPushButton#btnPrincipal {
-    background-color: #C9A227;
-    color: #121212;
-    border: 2px solid #FFD700;
-    font-size: 15px;
-    font-weight: bold;
+/* Estilos específicos por tipo de botón para dar dinamismo */
+
+/* Botones de Agregar (Verde éxito) */
+QPushButton#btn_agregarInicio, QPushButton#btn_agregarFinal {
+    border-left: 5px solid #28a745;
+}
+QPushButton#btn_agregarInicio:hover, QPushButton#btn_agregarFinal:hover {
+    background-color: #1e3d24;
+    color: #85e39d;
 }
 
-QPushButton#btnPrincipal:hover {
-    background-color: #FFD700;
+/* Botones de Eliminar (Rojo peligro) */
+QPushButton#btn_eliminarInicio, QPushButton#btn_eliminarFinal {
+    border-left: 5px solid #dc3545;
+}
+QPushButton#btn_eliminarInicio:hover, QPushButton#btn_eliminarFinal:hover {
+    background-color: #421c20;
+    color: #f7939b;
 }
 
-/* =========================
-   ToolTips
-   ========================= */
-QToolTip {
-    background-color: #1E1E1E;
-    color: white;
-    border: 1px solid #C9A227;
-    padding: 5px;
+/* Botón de Buscar (Azul / Cyan informativo) */
+QPushButton#btn_buscar {
+    border-left: 5px solid #00adb5;
+}
+QPushButton#btn_buscar:hover {
+    background-color: #0f3d4c;
+    color: #7fdbff;
+}
+
+/* Pantalla inferior de resultados (Donde se dibuja la lista) */
+QLabel#lbl_resultado {
+    background-color: #111116;
+    color: #39ec5c; /* Letras verdes tipo terminal matrix */
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 16px;
+    border: 2px solid #2a2a35;
+    border-radius: 8px;
+    padding: 15px;
 }</string>
   </property>
   <widget class="QPushButton" name="btn_agregarInicio">
@@ -175,8 +195,8 @@ QToolTip {
     <rect>
      <x>250</x>
      <y>120</y>
-     <width>55</width>
-     <height>16</height>
+     <width>91</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="text">
@@ -189,8 +209,8 @@ QToolTip {
   <widget class="QLineEdit" name="txt_dato">
    <property name="geometry">
     <rect>
-     <x>310</x>
-     <y>110</y>
+     <x>340</x>
+     <y>120</y>
      <width>221</width>
      <height>41</height>
     </rect>

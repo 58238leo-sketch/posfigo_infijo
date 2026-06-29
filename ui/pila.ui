@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>627</width>
+    <height>344</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Pila</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/* Estilo general de la ventana de diálogo */
+QDialog {
+    background-color: #1e1e24;
+    color: #ffffff;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* Estilo para las etiquetas de texto (Labels) */
+QLabel {
+    color: #f5f5f5;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* Estilo específico para resaltar el resultado de la pila */
+QLabel#lbl_resultado {
+    background-color: #2a2a32;
+    border: 2px solid #007acc;
+    border-radius: 6px;
+    padding: 10px;
+    color: #00efff;
+    font-family: 'Consolas', monospace;
+    font-size: 16px;
+}
+
+/* Estilo para la caja de texto (Input) */
+QLineEdit {
+    background-color: #2d2d38;
+    border: 1px solid #4a4a5a;
+    border-radius: 4px;
+    padding: 6px;
+    color: #ffffff;
+    font-size: 13px;
+    selection-background-color: #007acc;
+}
+QLineEdit:focus {
+    border: 1px solid #007acc;
+}
+
+/* Estilo base para TODOS los botones */
+QPushButton {
+    background-color: #2d2d38;
+    color: #ffffff;
+    border: 1px solid #4a4a5a;
+    border-radius: 5px;
+    padding: 8px 15px;
+    font-size: 13px;
+    font-weight: bold;
+}
+QPushButton:hover {
+    background-color: #3a3a4a;
+    border: 1px solid #007acc;
+}
+QPushButton:pressed {
+    background-color: #1e1e24;
+}
+
+/* Estilos específicos para destacar botones por su función */
+QPushButton#btn_push {
+    background-color: #0e639c;
+    border: 1px solid #007acc;
+}
+QPushButton#btn_push:hover {
+    background-color: #1177bb;
+}
+
+QPushButton#btn_pop {
+    background-color: #a82020;
+    border: 1px solid #cc2424;
+}
+QPushButton#btn_pop:hover {
+    background-color: #c42b2b;
+}
+
+/* Botones secundarios (Top y Print) */
+QPushButton#btn_top, QPushButton#btn_print {
+    background-color: #33333d;
+    color: #00efff;
+    border: 1px solid #00efff;
+}
+QPushButton#btn_top:hover, QPushButton#btn_print:hover {
+    background-color: #00efff;
+    color: #1e1e24;
+}</string>
+  </property>
+  <widget class="QPushButton" name="btn_push">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>20</y>
+     <width>81</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>PUSH</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_pop">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>20</y>
+     <width>91</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>POP</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_top">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>20</y>
+     <width>81</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TOP</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_print">
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>20</y>
+     <width>81</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>PRINT</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>80</y>
+     <width>101</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Dato</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_resultado">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>140</y>
+     <width>561</width>
+     <height>171</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txt_dato">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>90</y>
+     <width>151</width>
+     <height>31</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
