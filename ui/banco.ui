@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>552</width>
+    <height>375</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QDialog {
+    background-color: #0f172a;
+    color: #f8fafc;
+    font-family: 'Segoe UI', sans-serif;
+}
+QLabel {
+    color: #94a3b8;
+    font-weight: bold;
+}
+QLineEdit {
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 4px;
+    padding: 6px;
+    color: #ffffff;
+}
+QLineEdit:focus {
+    border: 1px solid #3b82f6;
+}
+QPushButton {
+    background-color: #1e293b;
+    color: #ffffff;
+    border: 1px solid #475569;
+    border-radius: 5px;
+    padding: 8px 14px;
+    font-weight: bold;
+}
+QPushButton:hover {
+    background-color: #334155;
+    border: 1px solid #3b82f6;
+}
+QPushButton#btn_turno {
+    background-color: #1d4ed8;
+    border: 1px solid #3b82f6;
+}
+QPushButton#btn_atender {
+    background-color: #047857;
+    border: 1px solid #10b981;
+}
+QPushButton#btn_cerrar {
+    background-color: #b91c1c;
+    border: 1px solid #ef4444;
+}
+QLabel#lbl_resultado_atender, QLabel#lbl_resultado_cerrar {
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 6px;
+    padding: 8px;
+    color: #f8fafc;
+}</string>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>20</y>
+     <width>71</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Cliente</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txt_cliente">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>20</y>
+     <width>181</width>
+     <height>31</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_turno">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>20</y>
+     <width>101</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Turno</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="lbl_resultado_turno">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>60</y>
+     <width>251</width>
+     <height>111</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_atender">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>60</y>
+     <width>101</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Atender</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_resultado_atender">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>110</y>
+     <width>211</width>
+     <height>111</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_cerrar">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>180</y>
+     <width>111</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Cerrar</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_resultado_cerrar">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>230</y>
+     <width>451</width>
+     <height>141</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

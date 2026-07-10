@@ -166,6 +166,7 @@ QStatusBar {
      <string>Aplicaciones</string>
     </property>
     <addaction name="actionInfija"/>
+    <addaction name="actionBanco"/>
    </widget>
    <addaction name="menuLista_Enlazada"/>
    <addaction name="menuAplicaciones"/>
@@ -214,6 +215,11 @@ QStatusBar {
   <action name="actionCola">
    <property name="text">
     <string>Cola</string>
+   </property>
+  </action>
+  <action name="actionBanco">
+   <property name="text">
+    <string>Banco</string>
    </property>
   </action>
  </widget>
