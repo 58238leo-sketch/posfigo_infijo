@@ -6,6 +6,7 @@ from load.load_lista_pila import MenuPila
 from load.load_infija import MenuInfija
 from load.load_lista_cola import MenuCola
 from load.load_banco import MenuBanco
+from load.load_impresora import MenuImpresora
 
 
 
@@ -27,6 +28,8 @@ class MenuPrincipal(QMainWindow):
         self.actionCola.triggered.connect(self.abrir_cola)
 
         self.actionBanco.triggered.connect(self.abrir_banco)
+
+        self.actionImpresora.triggered.connect(self.abrir_impresora)
 
 
 
@@ -51,5 +54,9 @@ class MenuPrincipal(QMainWindow):
     def abrir_banco(self):
         self.ventana_banco = MenuBanco()
         self.ventana_banco.show()
+
+    def abrir_impresora(self):
+        self.ventana_impresora = MenuImpresora()
+        self.ventana_impresora.show()
 
     

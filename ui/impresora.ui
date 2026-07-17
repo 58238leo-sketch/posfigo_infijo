@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DialogImpresora</class>
+ <widget class="QDialog" name="DialogImpresora">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>650</width>
+    <height>550</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Cola de Impresión - Laboratorio de Cómputo</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/* Fondo del diálogo principal */
+QDialog {
+    background-color: #f8fafc;
+    font-family: &quot;Segoe UI&quot;, Arial, sans-serif;
+}
+
+/* Estilo general para etiquetas de texto (Labels) */
+QLabel {
+    color: #334155;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/* Títulos o etiquetas destacadas */
+QLabel#lbl_total_pendientes {
+    font-size: 14px;
+    font-weight: bold;
+    color: #0f766e; /* Verde azulado oscuro */
+}
+
+/* Caja de mensajes de estado */
+QLabel#lbl_mensajes {
+    background-color: #f1f5f9;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 8px;
+    color: #1e293b;
+    font-size: 12px;
+}
+
+/* Campos de texto y SpinBox */
+QLineEdit, QSpinBox {
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: #1e293b;
+    font-size: 13px;
+}
+
+QLineEdit:focus, QSpinBox:focus {
+    border: 2px solid #0d9488; /* Enfoque color teal */
+    background-color: #f0fdfa;
+}
+
+/* Estilo para los botones */
+QPushButton {
+    background-color: #0d9488; /* Teal principal */
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 6px;
+}
+
+QPushButton:hover {
+    background-color: #0f766e; /* Teal más oscuro al pasar el cursor */
+}
+
+QPushButton:pressed {
+    background-color: #115e59;
+}
+
+/* Botón de &quot;Imprimir Siguiente&quot; destacado (acción principal) */
+QPushButton#btn_imprimir {
+    background-color: #0284c7; /* Azul */
+    font-size: 14px;
+}
+
+QPushButton#btn_imprimir:hover {
+    background-color: #0369a1;
+}
+
+/* Botón de &quot;Consultar Frente&quot; secundario */
+QPushButton#btn_frente {
+    background-color: #64748b; /* Gris pizarra */
+}
+
+QPushButton#btn_frente:hover {
+    background-color: #475569;
+}
+
+/* Estilo de la Tabla (QTableWidget) */
+QTableWidget {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    gridline-color: #f1f5f9;
+    border-radius: 6px;
+    color: #334155;
+    font-size: 12px;
+}
+
+QHeaderView::section {
+    background-color: #0f766e;
+    color: #ffffff;
+    padding: 6px;
+    font-weight: bold;
+    border: none;
+    font-size: 12px;
+}
+
+QTableWidget::item {
+    padding: 5px;
+}
+
+QTableWidget::item:selected {
+    background-color: #ccfbf1;
+    color: #0f766e;
+}</string>
+  </property>
+  <widget class="QLineEdit" name="txt_usuario">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>30</y>
+     <width>200</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="placeholderText">
+    <string>Ingrese el usuario...</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txt_documento">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>75</y>
+     <width>200</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="placeholderText">
+    <string>Nombre del archivo...</string>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="spin_paginas">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>120</y>
+     <width>100</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="minimum">
+    <number>1</number>
+   </property>
+   <property name="maximum">
+    <number>9999</number>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_user">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>35</y>
+     <width>110</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Usuario:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_doc">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>80</y>
+     <width>110</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Documento:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_pags">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>125</y>
+     <width>110</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>No. Páginas:</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_agregar">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>170</y>
+     <width>320</width>
+     <height>35</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Agregar Trabajo (Enqueue)</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_imprimir">
+   <property name="geometry">
+    <rect>
+     <x>380</x>
+     <y>30</y>
+     <width>240</width>
+     <height>45</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Imprimir Siguiente (Dequeue)</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_frente">
+   <property name="geometry">
+    <rect>
+     <x>380</x>
+     <y>90</y>
+     <width>240</width>
+     <height>35</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Consultar Frente (First/Peek)</string>
+   </property>
+  </widget>
+  <widget class="QTableWidget" name="tbl_pendientes">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>250</y>
+     <width>590</width>
+     <height>180</height>
+    </rect>
+   </property>
+   <column>
+    <property name="text">
+     <string>ID</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Usuario</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Documento</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Páginas</string>
+    </property>
+   </column>
+  </widget>
+  <widget class="QLabel" name="lbl_total_pendientes">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>220</y>
+     <width>300</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Trabajos en cola: 0</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_mensajes">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>450</y>
+     <width>590</width>
+     <height>70</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Área de notificaciones del sistema...</string>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
